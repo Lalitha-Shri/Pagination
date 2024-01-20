@@ -1,0 +1,50 @@
+<!-- The task is to implement pagenation to Json datas and create html elements using DOM 
+Only html css and javascript are used to complete the task-->
+
+<!DOCTYPE html>
+<html>
+    <!-- Linked css style sheets in head tag -->
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <link rel="stylesheet" href="pagination.css">
+
+    </head>
+    <body>
+        <div class="table-responsive"></div>
+        <div id="buttons" class="d-flex justify-content-center"></div>
+       <h1 id="title">Pagenation of JSON datas</h1> 
+       <p id="description">This is a pagenated page. Pagination is a way to break up large pieces of content into more bite-sized pieces.</p>
+       
+       <main>
+        <!-- div pagenation is to handles pagenation functions and to styles the button -->
+        <div class="pagination">
+          <button class="backward" id="first">First</button>
+          <button class="backward" id="prev">Previous</button>
+          <button class="forward" id="next">Next</button>
+          <button class="forward" id="last">Last</button>
+          <div class="page-numbers" id="pageNumbers"></div>
+        </div>
+        <!-- div table wrapper is to style the table which is fetched from json datas -->
+        <div class="table-wrapper">
+          <table id="paginatedTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+          <tbody>
+           
+          </tbody>
+        </table>
+        </div>
+      </main>
+     <!-- linked the zen portal verification tag using the below script tag -->
+      <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <!-- linked javascript file using script tag -->
+        <script src="page.js"></script>
+    </body>
+</html>

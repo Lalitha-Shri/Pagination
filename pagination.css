@@ -1,0 +1,112 @@
+/* styling the page is done through this css file.
+Backgroud colour is addded in body as gradient effect */
+body{
+background: linear-gradient(to right,rgb(98, 164, 98),rgb(104, 104, 166),rgb(209, 104, 209));
+
+}
+/* used to style the main section */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    
+  }
+  /* styles the h and p tags */
+  h1,p{
+    text-align: center;
+    color: rgb(70, 37, 63);
+  }
+ /* style the table */
+  .table-wrapper {
+    overflow: auto;
+    max-width: 100%;
+    background: linear-gradient(to right, rgb(157, 235, 151) 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgb(172, 207, 172) 70%) 0 100%, radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(165, 205, 154);
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-position: 0 0, 100%, 0 0, 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
+  /* style the table datas padding*/
+  td{
+  padding: 10px 5px !important;
+  padding-bottom: 20px;
+  }
+  /* style the rows table head and table data*/
+  tr {
+    border-bottom: 1px solid !important;
+    
+  }
+  
+  th {
+    background-color: #555 !important;
+    color: #fff !important;
+  }
+  
+  th,
+  td {
+    text-align: left !important;
+    padding: 0.5em 1em !important;
+    white-space: nowrap !important;
+  }
+  
+  .cd__main{
+  display: block !important;
+  }
+  .hidden {
+    display: none;
+  }
+  /* style the buttons */
+  button {
+    font-size: inherit;
+    margin: 0 0.25em;
+    padding: 0.25em 0.5em;
+    background-color: #555;
+    color: #fff;
+    border: 0;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  /* when hover over the button the colour changes using hover attribute */
+  button:hover {
+    background-color: #bbb;
+    color: #000;
+  }
+  /* style the div tag of pagenation buttons */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .page-numbers {
+    margin: 1em 1em 0;
+  }
+  
+  .page-number {
+    padding: 0.5em;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  /* active buttons are differentiated by reducing the opacity */
+  .active {
+    opacity: 1;
+  }
+  /* to make the page responsive media query is used */
+  @media screen and (min-width: 540px) {
+    .backward {
+      order: 1;
+    }
+  
+    .page-numbers {
+      order: 2;
+      margin-top: 0;
+    }
+  
+    .forward {
+      order: 3;
+    }
+  }
+  
